@@ -108,12 +108,12 @@ else
 fi
 COMPILER_PREFIX="${TOOLCHAIN}/bin/${HOST}${ANDROID_API}"
 
-export AR="${TOOL_PREFIX}-ar"
-export AS="${TOOL_PREFIX}-as"
+export AR="${TOOLCHAIN}/bin/llvm-ar"
+export AS="${TOOLCHAIN}/bin/llvm-as"
 export CC="${COMPILER_PREFIX}-clang"
-export LD="${TOOL_PREFIX}-ld"
-export RANLIB="${TOOL_PREFIX}-ranlib"
-export STRIP="${TOOL_PREFIX}-strip"
+export LD="${TOOLCHAIN}/bin/ld"
+export RANLIB="${TOOLCHAIN}/bin/llvm-ranlib"
+export STRIP="${TOOLCHAIN}/bin/llvm-strip"
 
 # Set up compiler flags.
 if [[ "${BUILD_MODE}" == "release" ]]; then
